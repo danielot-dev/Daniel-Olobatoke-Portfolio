@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+  }
+  
+  header {
+    background: #333;
+    color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  header .logo{
+    font-family:'clicker script', cursive;
+    font-size: 35px;
+    display: flex;
+  }
+
+  header .logo h1{
+    font-weight: normal;
+    font-size: 35px;
+    padding: 15px;
+  }
+
+  header .logo img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+ a{
+  color: white;
+  text-decoration: none;
+ } 
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+  }
+  
+  #home {
+    background: #007bff;
+    color: white;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+  }
+  
+  #home .intro h1 {
+    font-family:'clicker script',cursive;
+    font-size: 70px;
+    animation: slideIn 1.5s ease-in-out;
+  }
+  
+  #home .intro p {
+    font-size: 1.2rem;
+  }
+  
+  #about, #projects, #contact {
+    height: 100vh;
+    padding: 60px 20px;
+  }
+  
+  #projects {
+    background: #f0f0f0;
+  }
+  
+  .project-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .project-card {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  #contact form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+  }
+  
+  #contact input, #contact textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+  
+  footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  #typing::after{
+    content: "|";
+    animation: blink 0.7s infinite;
+  }
+  @keyframes blink{
+    50%{
+      opacity: 0;
+    }
+  }
+  .glitch{
+    animation: glitch 0.1s infinite;
+  }
+  @keyframes glitch{
+    0%{text-shadow: 2px 2px black, -2px -2px blue;}
+    25%{text-shadow: -2px 2px blue, 2px -2px black,}
+    50%{text-shadow: 2px -2px black, -2px 2px blue;}
+    75%{text-shadow: -2px -2px blue 2px 2px black;}
+    100%{text-shadow: 2px 2px black, -2px -2px blue;}
+  }
+
+ 
+@media  (max-width:767px) {
+  header .logo h1{
+    font-size: 20px;
+  }
+
+  header .logo img{
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav-links a{
+    font-weight: 100;
+    font-size: 10px;
+  }
+
+  footer{
+     font-size: 15px;
+  }
+}
+
+
